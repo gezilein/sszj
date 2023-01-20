@@ -5,7 +5,7 @@ import { useCourseStore } from "./store/CourseStore";
 import courseData from "./assets/data.json";
 import { Course } from "./models/Course";
 
-onMounted(() => {
+onBeforeMount(() => {
   const store = useCourseStore();
   store.setCourses(courseData.courses);
 });
