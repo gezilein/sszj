@@ -2,6 +2,7 @@
   "courses": [
     {
       "title": "Tečaj I",
+      "slug": "tecaj-1",
       "lessons": [
         {
           "title": "Enoročna abeceda in kretnje v gibanju črk"
