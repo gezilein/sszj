@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onBeforeMount, onMounted } from "vue";
 import Navigation from "./components/Navigation.vue";
-import { useLessonStore } from "./store/LessonStore";
-import lessonData from "./assets/lessons.json";
+import { useCourseStore } from "./store/CourseStore";
+import courseData from "./assets/data.json";
+import { Course } from "./models/Course";
 
 onMounted(() => {
-  const store = useLessonStore();
-  console.log(lessonData);
+  const store = useCourseStore();
+  store.setCourses(courseData.courses);
 });
 </script>
 
