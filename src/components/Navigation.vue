@@ -10,14 +10,14 @@ let items: MenuItem[] = [{ label: "Abeceda", to: "/abeceda", icon: PrimeIcons.TH
 onBeforeMount(() => {
   const store = useCourseStore();
   store.getCourses.forEach((c) => {
-    let lessonItems = c.lessons.map<MenuItem>((l) => {
-      return { label: l.title, to: "/" + c.slug + "/" + l.slug };
+    let lessonItems = c.lessons.map<MenuItem>((l, index) => {
+      return { label: index + 1 + ". " + l.title, to: "/" + c.slug + "/" + l.slug };
     });
-    items.push({ label: c.title, to: "/" + c.slug, items: lessonItems, icon: PrimeIcons.APPLE });
+    items.push({ label: c.title, items: lessonItems, icon: PrimeIcons.APPLE });
   });
 });
 </script>
 
 <template>
-  <PanelMenu :model="items" />
+  <PanelMenu :model="items" style="width: 15rem" />
 </template>
