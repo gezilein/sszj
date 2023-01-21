@@ -5,7 +5,8 @@
       "slug": "tecaj-1",
       "lessons": [
         {
-          "title": "Enoročna abeceda in kretnje v gibanju črk"
+          "slug": "enostavni-pojmi",
+          "title": "Enostavni pojmi"
         }
       ]
     }
