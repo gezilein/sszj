@@ -25,10 +25,6 @@ onBeforeRouteUpdate((to) => {
 const onMenuClick = function (s: Section): void {
   section.value = s;
 };
-
-const wordImages = function (w: Word) {
-  return [{ slug: w.slug + ".jpg", isImage: true }, { slug: w.slug + ".mp4" }];
-};
 </script>
 
 <template>
@@ -53,7 +49,7 @@ const wordImages = function (w: Word) {
           </template>
           <template #content>
             <Galleria
-              :value="wordImages(word)"
+              :value="word.content"
               :numVisible="1"
               :circular="true"
               :showItemNavigators="true"
@@ -62,12 +58,12 @@ const wordImages = function (w: Word) {
             >
               <template #item="slotProps">
                 <img
-                  v-if="slotProps.item.isImage"
-                  :src="'http://212.44.105.27/' + slotProps.item.slug"
+                  v-if="slotProps.item.endsWith('.jpg')"
+                  :src="'http://212.44.105.27/' + slotProps.item"
                   style="width: 15rem"
                 />
-                <video width="320" controls v-if="!slotProps.item.isImage">
-                  <source :src="'http://212.44.105.27/' + slotProps.item.slug" type="video/mp4" />
+                <video width="320" controls v-if="slotProps.item.endsWith('.mp4')">
+                  <source :src="'http://212.44.105.27/' + slotProps.item" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </template>

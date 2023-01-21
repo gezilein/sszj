@@ -1,4 +1,4 @@
-import { WorkbookNode } from "./WorkbookNode";
-
-
-export interface Word extends WorkbookNode { }
+export interface Word {
+  title: string;
+  content: string[];
+}

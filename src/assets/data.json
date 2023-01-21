@@ -11,7 +11,7 @@
             {
               "slug": "enorocna-abeceda",
               "title": "Enoročna abeceda in kretnje v gibanju črk",
-              "words": [{ "slug": "jabolko", "title": "Jabolko" }]
+              "words": [{ "content": ["jabolko.jpg", "jabolko.mp4"], "title": "\"A\" - jabolko" }]
             },
             { "slug": "predstavljanje", "title": "Predstavljanje" }
           ]
