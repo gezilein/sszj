@@ -8,8 +8,8 @@ import MenuBar from "primevue/menubar";
 import Card from "primevue/card";
 import { Section } from "../models/Section";
 import Galleria from "primevue/galleria";
-import { Word } from "../models/Word";
 
+const contentBaseUrl = "http://212.44.105.27/";
 const store = useCourseStore();
 let lesson = ref<Lesson>();
 let section = ref<Section>();
@@ -44,30 +44,30 @@ const onMenuClick = function (s: Section): void {
     <div class="grid" v-if="section">
       <div v-for="word in section?.words" class="col-4">
         <Card>
-          <template #footer>
-            {{ word.title }}
-          </template>
           <template #content>
             <Galleria
               :value="word.content"
               :numVisible="1"
               :circular="true"
-              :showItemNavigators="true"
+              :showItemNavigators="word.content.length > 1"
               :showThumbnails="false"
               width="2rem"
             >
               <template #item="slotProps">
                 <img
                   v-if="slotProps.item.endsWith('.jpg')"
-                  :src="'http://212.44.105.27/' + slotProps.item"
-                  style="width: 15rem"
+                  :src="contentBaseUrl + slotProps.item"
+                  style="height: 240px"
                 />
-                <video width="320" controls v-if="slotProps.item.endsWith('.mp4')">
-                  <source :src="'http://212.44.105.27/' + slotProps.item" type="video/mp4" />
+                <video height="240" controls v-if="slotProps.item.endsWith('.mp4')">
+                  <source :src="contentBaseUrl + slotProps.item" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </template>
             </Galleria>
+          </template>
+          <template #footer>
+            {{ word.title }}
           </template>
         </Card>
       </div>
