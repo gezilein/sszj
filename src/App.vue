@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted } from "vue";
+import { onBeforeMount } from "vue";
 import Navigation from "./components/Navigation.vue";
 import { useCourseStore } from "./store/CourseStore";
 import courseData from "./assets/data.json";
-import { Course } from "./models/Course";
 
 onBeforeMount(() => {
   const store = useCourseStore();
