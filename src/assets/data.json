@@ -5,9 +5,14 @@
       "slug": "tecaj-1",
       "lessons": [
         {
-          "slug": "enostavni-pojmi",
-          "title": "Enostavni pojmi"
-        }
+          "slug": "lekcija-1",
+          "title": "1. lekcija",
+          "sections": [
+            { "slug": "enorocna-abeceda", "title": "Enoročna abeceda in kretnje v gibanju črk" },
+            { "slug": "predstavljanje", "title": "Predstavljanje" }
+          ]
+        },
+        { "slug": "lekcija-2", "title": "2. lekcija" }
       ]
     }
   ]

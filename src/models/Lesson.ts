@@ -1,4 +1,6 @@
-export interface Lesson {
-  slug: string;
-  title: string;
+import { Section } from "./Section";
+import { WorkbookNode } from "./WorkbookNode";
+
+export interface Lesson extends WorkbookNode {
+  sections: Section[];
 }
