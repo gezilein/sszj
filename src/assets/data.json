@@ -1,8 +1,8 @@
 {
   "courses": [
     {
-      "title": "Tečaj I",
       "slug": "tecaj-1",
+      "title": "Tečaj I",
       "lessons": [
         {
           "slug": "lekcija-1",
@@ -12,7 +12,7 @@
             { "slug": "predstavljanje", "title": "Predstavljanje" }
           ]
         },
-        { "slug": "lekcija-2", "title": "2. lekcija" }
+        { "slug": "lekcija-2", "title": "2. lekcija", "sections": [] }
       ]
     }
   ]
