@@ -9,9 +9,10 @@ let items: MenuItem[] = [{ label: "Abeceda", to: "/abeceda", icon: PrimeIcons.TH
 
 onBeforeMount(() => {
   const store = useCourseStore();
+
   store.getCourses.forEach((c) => {
     let lessonItems = c.lessons.map<MenuItem>((l, index) => {
-      return { label: index + 1 + ". " + l.title, to: "/" + c.slug + "/" + l.slug };
+      return { label: l.title, to: "/" + c.slug + "/" + l.slug };
     });
     items.push({ label: c.title, items: lessonItems, icon: PrimeIcons.APPLE });
   });
