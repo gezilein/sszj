@@ -4,6 +4,8 @@ import { onBeforeRouteUpdate } from "vue-router";
 import { Lesson } from "../models/Lesson";
 import { useCourseStore } from "../store/CourseStore";
 import Panel from "primevue/panel";
+import MenuBar from "primevue/menubar";
+import Card from "primevue/card";
 
 const store = useCourseStore();
 let lesson = ref<Lesson>();
@@ -16,7 +18,19 @@ onBeforeRouteUpdate((to) => {
 </script>
 
 <template>
-  <Panel v-if="lesson" :header="lesson.title">
-    {{ lesson.slug }}
+  <Panel v-if="lesson" :header="lesson?.title">
+    <MenuBar
+      :model="
+        lesson?.sections.map((s) => {
+          return { label: s.title };
+        })
+      "
+      class="my-2"
+    />
+    <Card>
+      <template #content>
+        {{ lesson?.slug }}
+      </template>
+    </Card>
   </Panel>
 </template>
