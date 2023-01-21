@@ -1,12 +1,26 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { onActivated, onBeforeUpdate, onMounted, ref } from "vue";
+import { onBeforeRouteUpdate, useRoute } from "vue-router";
+import { Lesson } from "../models/Lesson";
 import { useCourseStore } from "../store/CourseStore";
+import Panel from "primevue/panel";
+
 const store = useCourseStore();
 const route = useRoute();
+let lesson = ref<Lesson>();
+
+onBeforeRouteUpdate((to, from, next) => {
+  lesson.value = store.getCourses
+    .find((c) => c.slug === to.params.course)
+    ?.lessons.find((l) => l.slug === to.params.lesson);
+  next();
+});
+
+onMounted(() => {});
 </script>
 
 <template>
-  <h2>Poglavje {{ store.courses.length }}</h2>
-  {{ route.fullPath }}
-  {{ route.params.course }}
+  <Panel v-if="lesson" :header="lesson.title">
+    {{ lesson.slug }}
+  </Panel>
 </template>

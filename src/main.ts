@@ -12,7 +12,7 @@ const router = createRouter({
   routes: [
     { path: "/", component: Home },
     { path: "/abeceda", component: Alphabet },
-    { path: "/:course/:lesson?", component: Workbook },
+    { path: "/:course/:lesson", component: Workbook },
   ],
 });
 
