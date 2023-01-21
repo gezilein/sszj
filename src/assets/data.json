@@ -11,7 +11,12 @@
             {
               "slug": "enorocna-abeceda",
               "title": "Enoročna abeceda in kretnje v gibanju črk",
-              "words": [{ "content": ["jabolko.jpg", "jabolko.mp4"], "title": "\"A\" - jabolko" }]
+              "words": [
+                { "content": ["jabolko.jpg", "jabolko.mp4"], "title": "\"A\" - jabolko" },
+                { "content": ["bar.mp4"], "title": "\"B\" - bar" },
+                { "content": ["slon.mp4"], "title": "\"C\" - slon" },
+                { "content": ["gristi.mp4"], "title": "\"Č\" - gristi" }
+              ]
             },
             { "slug": "predstavljanje", "title": "Predstavljanje" }
           ]
