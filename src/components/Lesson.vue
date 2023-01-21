@@ -1,22 +1,25 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { onBeforeRouteUpdate, useRoute } from "vue-router";
 import { Lesson } from "../models/Lesson";
-import { useCourseStore } from "../store/CourseStore";
-import Panel from "primevue/panel";
-import MenuBar from "primevue/menubar";
-import Card from "primevue/card";
-import { Section } from "../models/Section";
-import Galleria from "primevue/galleria";
-import Toolbar from "primevue/toolbar";
-import ToggleButton from "primevue/togglebutton";
+import { onBeforeRouteUpdate, useRoute } from "vue-router";
 import { PrimeIcons } from "primevue/api";
+import { ref } from "vue";
+import { Section } from "../models/Section";
+import { useCourseStore } from "../store/CourseStore";
+import BlockUI from "primevue/blockui";
+import Card from "primevue/card";
+import Divider from "primevue/divider";
+import Galleria from "primevue/galleria";
+import MenuBar from "primevue/menubar";
+import Panel from "primevue/panel";
+import ToggleButton from "primevue/togglebutton";
+import Toolbar from "primevue/toolbar";
 
 const contentBaseUrl = "http://212.44.105.27/";
 const store = useCourseStore();
 let lesson = ref<Lesson>();
 let section = ref<Section>();
 let showGallery = ref<boolean>(true);
+let showWords = ref<boolean>(true);
 
 onBeforeRouteUpdate((to) => {
   lesson.value = store.getCourses
@@ -44,13 +47,23 @@ const onMenuClick = function (s: Section): void {
         })
       "
       class="my-2"
-    />
-    <Toolbar>
+    >
+    </MenuBar>
+    <Toolbar v-if="section">
       <template #start>
         <ToggleButton
           v-model="showGallery"
           onLabel="Galerija vidna"
           offLabel="Galerija skrita"
+          :onIcon="PrimeIcons.CHECK"
+          :offIcon="PrimeIcons.TIMES"
+          class="mx-1"
+        />
+
+        <ToggleButton
+          v-model="showWords"
+          onLabel="Beseda vidna"
+          offLabel="Beseda skrita"
           :onIcon="PrimeIcons.CHECK"
           :offIcon="PrimeIcons.TIMES"
         />
@@ -69,23 +82,40 @@ const onMenuClick = function (s: Section): void {
               width="2rem"
             >
               <template #item="slotProps">
-                <img
-                  v-if="slotProps.item.endsWith('.jpg')"
-                  :src="contentBaseUrl + slotProps.item"
-                  style="height: 240px"
-                />
-                <video height="240" controls v-if="slotProps.item.endsWith('.mp4')">
-                  <source :src="contentBaseUrl + slotProps.item" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <BlockUI :blocked="!showGallery" class="gallery-overlay">
+                  <img
+                    v-if="slotProps.item.endsWith('.jpg')"
+                    :src="contentBaseUrl + slotProps.item"
+                    style="height: 240px"
+                  />
+                  <video height="240" controls v-if="slotProps.item.endsWith('.mp4')">
+                    <source :src="contentBaseUrl + slotProps.item" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </BlockUI>
               </template>
             </Galleria>
           </template>
           <template #footer>
-            {{ word.title }}
+            <Toolbar>
+              <template #start>
+                <BlockUI :blocked="!showWords" class="gallery-overlay">
+                  {{ word.title }}
+                </BlockUI>
+              </template>
+              <template #end>
+                <ToggleButton></ToggleButton>
+              </template>
+            </Toolbar>
           </template>
         </Card>
       </div>
     </div>
   </Panel>
 </template>
+
+<style>
+.gallery-overlay > .p-component-overlay {
+  background: rgba(255, 255, 255, 1) !important;
+}
+</style>
