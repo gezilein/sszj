@@ -8,7 +8,11 @@
           "slug": "lekcija-1",
           "title": "1. lekcija",
           "sections": [
-            { "slug": "enorocna-abeceda", "title": "Enoročna abeceda in kretnje v gibanju črk" },
+            {
+              "slug": "enorocna-abeceda",
+              "title": "Enoročna abeceda in kretnje v gibanju črk",
+              "words": [{ "slug": "jabolko", "title": "Jabolko" }]
+            },
             { "slug": "predstavljanje", "title": "Predstavljanje" }
           ]
         },
