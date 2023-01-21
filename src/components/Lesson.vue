@@ -8,11 +8,15 @@ import MenuBar from "primevue/menubar";
 import Card from "primevue/card";
 import { Section } from "../models/Section";
 import Galleria from "primevue/galleria";
+import Toolbar from "primevue/toolbar";
+import ToggleButton from "primevue/togglebutton";
+import { PrimeIcons } from "primevue/api";
 
 const contentBaseUrl = "http://212.44.105.27/";
 const store = useCourseStore();
 let lesson = ref<Lesson>();
 let section = ref<Section>();
+let showGallery = ref<boolean>(true);
 
 onBeforeRouteUpdate((to) => {
   lesson.value = store.getCourses
@@ -41,6 +45,17 @@ const onMenuClick = function (s: Section): void {
       "
       class="my-2"
     />
+    <Toolbar>
+      <template #start>
+        <ToggleButton
+          v-model="showGallery"
+          onLabel="Galerija vidna"
+          offLabel="Galerija skrita"
+          :onIcon="PrimeIcons.CHECK"
+          :offIcon="PrimeIcons.TIMES"
+        />
+      </template>
+    </Toolbar>
     <div class="grid" v-if="section">
       <div v-for="word in section?.words" class="col-4">
         <Card>
