@@ -15,8 +15,6 @@ onBeforeRouteUpdate((to, from, next) => {
     ?.lessons.find((l) => l.slug === to.params.lesson);
   next();
 });
-
-onMounted(() => {});
 </script>
 
 <template>
