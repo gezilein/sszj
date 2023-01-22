@@ -12,7 +12,7 @@
               "slug": "enorocna-abeceda",
               "title": "Enoročna abeceda in kretnje v gibanju črk",
               "words": [
-                { "content": ["jabolko.mp4"], "title": "\"A\" - jabolko" },
+                { "content": ["jabolko.mp4", "jabolko.jpg"], "title": "\"A\" - jabolko" },
                 { "content": ["bar.mp4"], "title": "\"B\" - bar" },
                 { "content": ["slon.mp4"], "title": "\"C\" - slon" },
                 { "content": ["gristi.mp4"], "title": "\"Č\" - gristi" }
@@ -21,7 +21,32 @@
             { "slug": "predstavljanje", "title": "Predstavljanje", "words": [] }
           ]
         },
-        { "slug": "lekcija-2", "title": "2. lekcija", "sections": [] }
+        { "slug": "lekcija-2", "title": "2. lekcija", "sections": [] },
+        {
+          "slug": "lekcija-10",
+          "title": "10. lekcija",
+          "sections": [
+            {
+              "slug": "glagoli",
+              "title": "Glagoli",
+              "words": [
+                { "content": ["delati.mp4"], "title": "Delati / delo" },
+                { "content": ["storiti.mp4", "napraviti.mp4"], "title": "Narediti / storiti / napraviti" },
+                { "content": ["studij.mp4"], "title": "Študirati / študij" },
+                { "content": ["pisati.mp4"], "title": "Pisati" },
+                { "content": ["brati.mp4", "branje.mp4", "prebrati.mp4"], "title": "Brati / branje / prebrati" },
+                { "content": ["dobiti_copy1.mp4"], "title": "Dobiti" },
+                { "content": ["dati_copy1.mp4", "dati.mp4", "dati2.mp4"], "title": "Dati" },
+                { "content": ["vrniti__meni_.mp4", "vrniti__meni_1.mp4", "vrniti1.mp4"], "title": "Vrniti meni" },
+                { "content": ["vrniti.mp4", "vrniti__nekomu_.mp4"], "title": "Vrniti" },
+                { "content": ["vrniti_se_copy1.mp4"], "title": "Vrniti se" },
+                { "content": ["misliti_copy2.mp4", "misel.mp4"], "title": "Misliti / misel" },
+                { "content": ["vedeti_copy1.mp4", "vedeti.mp4", "znati.mp4"], "title": "Vedeti / znati" },
+                { "content": ["vem.mp4"], "title": "Vem" }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
