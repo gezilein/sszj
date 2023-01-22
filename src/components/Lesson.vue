@@ -96,10 +96,8 @@ const onMenuClick = function (s: Section): void {
                     height="240"
                     v-if="slotProps.item.endsWith('.mp4')"
                     onclick="if(this.paused) this.play(); else this.pause();"
-                  >
-                    <source :src="contentBaseUrl + slotProps.item" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                    :src="contentBaseUrl + slotProps.item"
+                  ></video>
                 </BlockUI>
               </template>
             </Galleria>
