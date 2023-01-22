@@ -92,7 +92,11 @@ const onMenuClick = function (s: Section): void {
                     :src="contentBaseUrl + slotProps.item"
                     style="height: 240px"
                   />
-                  <video height="240" controls v-if="slotProps.item.endsWith('.mp4')">
+                  <video
+                    height="240"
+                    v-if="slotProps.item.endsWith('.mp4')"
+                    onclick="if(this.paused) this.play(); else this.pause();"
+                  >
                     <source :src="contentBaseUrl + slotProps.item" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
