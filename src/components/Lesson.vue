@@ -31,7 +31,7 @@ onBeforeRouteUpdate((to) => {
 });
 
 const onMenuClick = function (s: Section): void {
-  s.words.forEach((w) => (w.showGallery = w.showWord = true));
+  s.words?.forEach((w) => (w.showGallery = w.showWord = true));
   section.value = s;
 };
 </script>
