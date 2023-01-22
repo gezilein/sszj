@@ -13,6 +13,7 @@ import MenuBar from "primevue/menubar";
 import Panel from "primevue/panel";
 import ToggleButton from "primevue/togglebutton";
 import Toolbar from "primevue/toolbar";
+import { ToggleableWord } from "../models/ToggleableWord";
 
 const contentBaseUrl = "http://212.44.105.27/";
 const store = useCourseStore();
@@ -30,6 +31,7 @@ onBeforeRouteUpdate((to) => {
 });
 
 const onMenuClick = function (s: Section): void {
+  s.words.forEach((w) => (w.showGallery = w.showWord = true));
   section.value = s;
 };
 </script>
@@ -46,10 +48,10 @@ const onMenuClick = function (s: Section): void {
           };
         })
       "
-      class="my-2"
+      :buttonProps="{ style: 'background:red' }"
     >
     </MenuBar>
-    <Toolbar v-if="section">
+    <Toolbar v-if="section" class="my-2">
       <template #start>
         <ToggleButton
           v-model="showGallery"
@@ -58,6 +60,7 @@ const onMenuClick = function (s: Section): void {
           :onIcon="PrimeIcons.CHECK"
           :offIcon="PrimeIcons.TIMES"
           class="mx-1"
+          @change="section?.words.forEach((w) => (w.showGallery = showGallery))"
         />
 
         <ToggleButton
@@ -66,6 +69,7 @@ const onMenuClick = function (s: Section): void {
           offLabel="Beseda skrita"
           :onIcon="PrimeIcons.CHECK"
           :offIcon="PrimeIcons.TIMES"
+          @change="section?.words.forEach((w) => (w.showWord = showWords))"
         />
       </template>
     </Toolbar>
@@ -82,7 +86,7 @@ const onMenuClick = function (s: Section): void {
               width="2rem"
             >
               <template #item="slotProps">
-                <BlockUI :blocked="!showGallery" class="gallery-overlay">
+                <BlockUI :blocked="!word.showGallery" class="gallery-overlay">
                   <img
                     v-if="slotProps.item.endsWith('.jpg')"
                     :src="contentBaseUrl + slotProps.item"
@@ -99,12 +103,27 @@ const onMenuClick = function (s: Section): void {
           <template #footer>
             <Toolbar>
               <template #start>
-                <BlockUI :blocked="!showWords" class="gallery-overlay">
+                <BlockUI :blocked="!word.showWord" class="gallery-overlay">
                   {{ word.title }}
                 </BlockUI>
               </template>
               <template #end>
-                <ToggleButton></ToggleButton>
+                <ToggleButton
+                  v-model="word.showGallery"
+                  onLabel="Galerija vidna"
+                  offLabel="Galerija skrita"
+                  :onIcon="PrimeIcons.CHECK"
+                  :offIcon="PrimeIcons.TIMES"
+                  class="mx-1"
+                />
+
+                <ToggleButton
+                  v-model="word.showWord"
+                  onLabel="Beseda vidna"
+                  offLabel="Beseda skrita"
+                  :onIcon="PrimeIcons.CHECK"
+                  :offIcon="PrimeIcons.TIMES"
+                />
               </template>
             </Toolbar>
           </template>
