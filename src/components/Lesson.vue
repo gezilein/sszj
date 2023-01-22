@@ -55,8 +55,8 @@ const onMenuClick = function (s: Section): void {
       <template #start>
         <ToggleButton
           v-model="showGallery"
-          onLabel="Galerija vidna"
-          offLabel="Galerija skrita"
+          onLabel="Galerija"
+          offLabel="Galerija"
           :onIcon="PrimeIcons.CHECK"
           :offIcon="PrimeIcons.TIMES"
           class="mx-1"
@@ -65,8 +65,8 @@ const onMenuClick = function (s: Section): void {
 
         <ToggleButton
           v-model="showWords"
-          onLabel="Beseda vidna"
-          offLabel="Beseda skrita"
+          onLabel="Beseda"
+          offLabel="Beseda"
           :onIcon="PrimeIcons.CHECK"
           :offIcon="PrimeIcons.TIMES"
           @change="section?.words.forEach((w) => (w.showWord = showWords))"
@@ -112,8 +112,8 @@ const onMenuClick = function (s: Section): void {
               <template #end>
                 <ToggleButton
                   v-model="word.showGallery"
-                  onLabel="Galerija vidna"
-                  offLabel="Galerija skrita"
+                  onLabel="Galerija"
+                  offLabel="Galerija"
                   :onIcon="PrimeIcons.CHECK"
                   :offIcon="PrimeIcons.TIMES"
                   class="mx-1"
@@ -121,8 +121,8 @@ const onMenuClick = function (s: Section): void {
 
                 <ToggleButton
                   v-model="word.showWord"
-                  onLabel="Beseda vidna"
-                  offLabel="Beseda skrita"
+                  on-label="Beseda"
+                  off-label="Beseda"
                   :onIcon="PrimeIcons.CHECK"
                   :offIcon="PrimeIcons.TIMES"
                 />
