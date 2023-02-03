@@ -14,7 +14,7 @@ onBeforeMount(() => {
     let lessonItems = c.lessons.map<MenuItem>((l, index) => {
       return { label: l.title, to: "/" + c.slug + "/" + l.slug };
     });
-    items.push({ label: c.title, items: lessonItems, icon: PrimeIcons.APPLE });
+    items.push({ label: c.title, items: lessonItems });
   });
 });
 </script>
