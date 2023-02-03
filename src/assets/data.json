@@ -44,6 +44,172 @@
                 { "content": ["vedeti_copy1.mp4", "vedeti.mp4", "znati.mp4"], "title": "Vedeti / znati" },
                 { "content": ["vem.mp4"], "title": "Vem" }
               ]
+            },
+            { "slug": "predstavljanje", "title": "Predstavljanje", "words": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "pesmi",
+      "title": "Pesmi",
+      "lessons": [
+        {
+          "slug": "na-planini",
+          "title": "Na planini je živel",
+          "sections": [
+            {
+              "slug": "verz-1",
+              "title": "1. verz",
+              "words": [
+                { "title": "Na", "content": ["na.mp4"] },
+                { "title": "planini", "content": ["planina.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "živel", "content": ["ziveti.mp4"] },
+                { "title": "rad", "content": ["rad_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "stare", "content": ["star_copy1.mp4"] },
+                { "title": "pesmi", "content": ["pesem.mp4"] },
+                { "title": "pel", "content": ["peti-petje_mimika.mp4"] },
+                { "title": "se", "content": [] },
+                { "title": "življenja", "content": ["zivljenje_copy1.mp4"] },
+                { "title": "veselil", "content": ["veseliti_se.mp4"] },
+                { "title": "mnogo", "content": ["mnogo_copy1.mp4"] },
+                { "title": "vinca", "content": ["vino.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "popil", "content": ["popiti.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-2",
+              "title": "2. verz",
+              "words": [
+                { "title": "Ko", "content": ["kdaj_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "prvič", "content": ["prvic_copy1.mp4"] },
+                { "title": "šel", "content": ["iti_copy1.mp4"] },
+                { "title": "v", "content": ["v3.mp4"] },
+                { "title": "svet", "content": ["svet_copy1.mp4"] },
+                { "title": "si", "content": [] },
+                { "title": "pripel", "content": ["pripeti1.mp4"] },
+                { "title": "rdeč", "content": ["rdec.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "cvet", "content": ["cvet.mp4"] },
+                { "title": "ki ga z", "content": ["z__predlog_.mp4"] },
+                { "title": "žuljavo", "content": ["zulj_1534.mp4"] },
+                { "title": "roko", "content": ["roka.mp4"] },
+                { "title": "mati", "content": ["mati.mp4"] },
+                { "title": "dala", "content": ["dati_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "v", "content": ["v3.mp4"] },
+                { "title": "slovo", "content": ["slovo.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-3",
+              "title": "3. verz",
+              "words": [
+                { "title": "Oče", "content": ["oce_copy1.mp4"] },
+                { "title": "zgubljal", "content": ["izgubiti_copy1.mp4"] },
+                { "title": "ni", "content": ["ni.mp4"] },
+                { "title": "besed", "content": ["beseda.mp4"] },
+                { "title": "bil", "content": ["prej_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "vajen", "content": ["vajen_22517.mp4"] },
+                { "title": "tujce", "content": ["tujec.mp4"] },
+                { "title": "klet", "content": ["kleti.mp4"] },
+                { "title": "fantu", "content": ["fant_copy1.mp4"] },
+                { "title": "dal", "content": ["dati_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "v", "content": ["v3.mp4"] },
+                { "title": "spomin", "content": ["spomin.mp4"] },
+                { "title": "zeleneči", "content": ["zeleneti.mp4"] },
+                { "title": "rožmarin", "content": ["roza_copy1.mp4"] },
+                { "title": "in", "content": ["in_copy1.mp4"] },
+                { "title": "dejal", "content": ["reci_copy1.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-4",
+              "title": "4. verz",
+              "words": [
+                { "title": "koder", "content": ["kje1.mp4"] },
+                { "title": "hodil", "content": ["hoditi.mp4"] },
+                { "title": "boš", "content": ["bo_copy1.mp4"] },
+                { "title": "z", "content": ["z__predlog_.mp4"] },
+                { "title": "njim", "content": ["on_copy1.mp4"] },
+                { "title": "vedi", "content": ["vedeti_copy1.mp4"] },
+                { "title": "da", "content": ["da_copy1.mp4"] },
+                { "title": "si", "content": [] },
+                { "title": "le", "content": ["le.mp4"] },
+                { "title": "slovenskega", "content": ["Slovenija_copy2.mp4"] },
+                { "title": "naroda", "content": ["narod.mp4"] },
+                { "title": "sin", "content": ["sin_copy1.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-5",
+              "title": "5. verz",
+              "words": [
+                { "title": "sam", "content": ["sam1.mp4"] },
+                { "title": "utiral (si je) pot", "content": ["utirati_pot.mp4"] },
+                { "title": "videl", "content": ["videti3.mp4"] },
+                { "title": "mnogo", "content": ["mnogo_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "zarot", "content": ["zarota1.mp4"] },
+                { "title": "težko", "content": ["tezko_copy1.mp4"] },
+                { "title": "se", "content": [] },
+                { "title": "premagoval", "content": ["premagati_-_ucimo_ZJ4.mp4"] },
+                { "title": "ker", "content": [] },
+                { "title": "ubijati", "content": ["ubijati.mp4"] },
+                { "title": "ni znal", "content": ["U5_znati_%E2%80%93_ne_znati.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-6",
+              "title": "6. verz",
+              "words": [
+                { "title": "večkrat", "content": ["veckrat_copy1.mp4"] },
+                { "title": "jokal", "content": ["jokati_1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "na", "content": ["na.mp4"] },
+                { "title": "glas", "content": ["glas.mp4"] },
+                { "title": "čakal", "content": ["cakati_copy1.mp4"] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "vrnitve", "content": ["vrnitev.mp4"] },
+                { "title": "čas", "content": ["cas1.mp4"] },
+                { "title": "nič", "content": ["nic_copy1.mp4"] },
+                { "title": "več", "content": ["vec_copy1.mp4"] },
+                { "title": "ni", "content": ["ni.mp4"] },
+                { "title": "le", "content": ["le.mp4"] },
+                { "title": "zmagoval", "content": ["zmaga_copy1.mp4"] },
+                { "title": "in", "content": ["in_copy1.mp4"] },
+                { "title": "zato", "content": ["zato.mp4"] },
+                { "title": "si", "content": [] },
+                { "title": "je", "content": ["je.mp4"] },
+                { "title": "lagal", "content": ["lagati.mp4"] },
+                { "title": "iz", "content": ["iz_copy1.mp4"] },
+                { "title": "dneva", "content": ["dan_copy1.mp4"] },
+                { "title": "v", "content": ["v3.mp4"] },
+                { "title": "dan", "content": ["dan_copy1.mp4"] }
+              ]
+            },
+            {
+              "slug": "verz-7",
+              "title": "7. verz",
+              "words": [
+                { "title": "ni", "content": ["ni.mp4"] },
+                { "title": "mi", "content": [] },
+                { "title": "mar", "content": ["mar.mp4"] },
+                { "title": "bolečin", "content": ["bolecina.mp4"] },
+                { "title": "z", "content": ["z__predlog_.mp4"] },
+                { "title": "njimi", "content": ["oni.mp4"] },
+                { "title": "živim", "content": ["ziveti.mp4"] },
+                { "title": "kot", "content": ["kakor.mp4"] },
+                { "title": "slovenskega", "content": ["Slovenija_copy2.mp4"] },
+                { "title": "naroda", "content": ["narod.mp4"] },
+                { "title": "sin", "content": ["sin_copy1.mp4"] }
+              ]
             }
           ]
         }
