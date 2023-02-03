@@ -62,7 +62,7 @@
               "slug": "verz-1",
               "title": "1. verz",
               "words": [
-                { "title": "Na", "content": ["na.mp4"] },
+                { "title": "na", "content": ["na.mp4"] },
                 { "title": "planini", "content": ["planina.mp4"] },
                 { "title": "je", "content": ["je.mp4"] },
                 { "title": "živel", "content": ["ziveti.mp4"] },
@@ -84,7 +84,7 @@
               "slug": "verz-2",
               "title": "2. verz",
               "words": [
-                { "title": "Ko", "content": ["kdaj_copy1.mp4"] },
+                { "title": "ko", "content": ["kdaj_copy1.mp4"] },
                 { "title": "je", "content": ["je.mp4"] },
                 { "title": "prvič", "content": ["prvic_copy1.mp4"] },
                 { "title": "šel", "content": ["iti_copy1.mp4"] },
@@ -109,7 +109,7 @@
               "slug": "verz-3",
               "title": "3. verz",
               "words": [
-                { "title": "Oče", "content": ["oce_copy1.mp4"] },
+                { "title": "oče", "content": ["oce_copy1.mp4"] },
                 { "title": "zgubljal", "content": ["izgubiti_copy1.mp4"] },
                 { "title": "ni", "content": ["ni.mp4"] },
                 { "title": "besed", "content": ["beseda.mp4"] },
